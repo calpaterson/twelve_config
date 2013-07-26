@@ -11,8 +11,7 @@ class Configuration(DictMixin):
 
     def __getitem__(self, name):
         lower = name.lower()
-        if name in self._config:
-            return self._config[name]
+        return self._config[name]
 
     def __setitem__(self, unused_key, unused_value):
         raise NotImplementedError("Not allowed to mutate configuration")
